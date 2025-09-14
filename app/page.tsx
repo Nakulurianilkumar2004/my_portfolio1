@@ -12,14 +12,14 @@ const projects = [
   {
     title: "Kisan Service Portal",
     description: "Developed an AI-powered Agri Assistant for real-time crop disease detection, soil testing, and multilingual query support. Integrated image processing and chatbots to improve agricultural decision-making.",
-    link: "https://github.com/Nakulurianilkumar2004", 
+    link: "https://github.com/Nakulurianilkumar2004/kisan_services_portal", 
     image: "/kisan.jpg",
   },
   {
     title: "Health Assistant",
     description: "Designed an AI-based Virtual Health Assistant for rural communities to analyze symptoms, offer basic diagnoses, and recommend home remedies. Features include multilingual support and emergency SOS.",
-    link: "https://github.com/Nakulurianilkumar2004",
-    image: "/health.jpg",
+    link: "https://github.com/Nakulurianilkumar2004/Health_based_chatbot_and_diabeties_prediction",
+    image: "/health.jpeg",
   },
 ];
 
@@ -77,7 +77,7 @@ const experience = [
     ]
   },
   {
-    role: "Project Mentor",
+    role: "GAP DEV 2.0 Project Mentor",
     company: "KGReddy College of Engineering and Technology",
     dates: "Jan 2025 - May 2025",
     description: [
@@ -136,39 +136,11 @@ export default function HomePage() {
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 tracking-tight text-white">About Me</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative w-full h-96 rounded-3xl overflow-hidden shadow-2xl transform transition-transform duration-500 hover:scale-[1.01]">
-              <Image src="/about-me.jpg" alt="About Me" layout="fill" objectFit="cover" />
+              <Image src="/portfol1.png" alt="About Me" fill style={{ objectFit: 'cover' }} />
             </div>
             <p className="text-xl text-gray-300 leading-relaxed font-light">
               I am a driven and detail-oriented aspiring AI Engineer with a solid foundation in machine learning, deep learning, and data analysis. I am proficient in **Python** and **AI frameworks**, with a strong commitment to continuous learning and applying AI to impactful real-world solutions. I have hands-on experience as an **AI Intern** at Pantech Solutions and have guided students as a project mentor at KGReddy College. I was also honored with the **&quot;KGR Change Maker Award&quot;** for outstanding innovation and leadership.
             </p>
-          </div>
-        </div>
-      </motion.section>
-
-      {/* Education Section */}
-      <motion.section 
-        id="education" 
-        className="py-24 px-4 bg-gray-950 transition-colors duration-500"
-        variants={sectionVariants}
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        <div className="container mx-auto max-w-5xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 tracking-tight text-white">Education</h2>
-          <div className="grid gap-12">
-            {education.map((edu, index) => (
-              <Card key={index} className="bg-gray-900 border-gray-800 text-white p-6 rounded-xl shadow-lg">
-                <CardHeader className="p-0 mb-4">
-                  <CardTitle className="text-2xl font-bold">{edu.degree}</CardTitle>
-                  <CardDescription className="text-gray-400 mt-1">{edu.institution} • {edu.dates}</CardDescription>
-                </CardHeader>
-                <CardContent className="p-0">
-                  <ul className="list-disc list-inside space-y-2 text-gray-300">
-                    <li>Achieved {edu.gpa}</li>
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </motion.section>
@@ -224,7 +196,7 @@ export default function HomePage() {
               >
                 <Card className="h-full group hover:shadow-2xl transition-shadow duration-300 rounded-2xl overflow-hidden bg-gray-900 text-white border-gray-800 transform transition-transform duration-300 hover:scale-[1.01]">
                   <div className="relative h-64 w-full overflow-hidden">
-                    <Image src={project.image} alt={project.title} layout="fill" objectFit="cover" className="transition-transform duration-500 group-hover:scale-105" />
+                    <Image src={project.image} alt={project.title} fill style={{ objectFit: 'cover' }} className="transition-transform duration-500 group-hover:scale-105" />
                   </div>
                   <CardHeader className="p-6">
                     <CardTitle className="text-2xl font-semibold flex items-center justify-between">
@@ -271,6 +243,8 @@ export default function HomePage() {
         </div>
       </motion.section>
 
+
+
       {/* Contact Section */}
       <motion.section 
         id="contact" 
@@ -282,7 +256,7 @@ export default function HomePage() {
         <div className="container mx-auto max-w-3xl text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-white">Get In Touch</h2>
           <p className="text-xl text-gray-300 mb-10 leading-relaxed font-light">
-            I'm currently seeking new opportunities. Whether you have a project in mind or just want to connect, feel free to reach out. I'm always open to discussing new ideas.
+            I&#39;m currently seeking new opportunities. Whether you have a project in mind or just want to connect, feel free to reach out. I&#39;m always open to discussing new ideas.
           </p>
           <Button size="lg" className="px-8 py-6 text-xl rounded-full shadow-lg hover:shadow-xl transition-shadow bg-primary text-primary-foreground hover:bg-primary/90" asChild>
             <a href="mailto:nakulurianilkumar66@gmail.com">
@@ -293,4 +267,4 @@ export default function HomePage() {
       </motion.section>
     </motion.main>
   );
-}
+} 
