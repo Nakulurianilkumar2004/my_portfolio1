@@ -12,19 +12,34 @@ const projects = [
   {
     title: "Kisan Service Portal",
     description: "Developed an AI-powered Agri Assistant for real-time crop disease detection, soil testing, and multilingual query support. Integrated image processing and chatbots to improve agricultural decision-making.",
-    link: "https://github.com/Nakulurianilkumar2004/kisan_services_portal", 
+    link: "https://github.com/Nakulurianilkumar2004", 
     image: "/kisan.jpg",
   },
   {
     title: "Health Assistant",
     description: "Designed an AI-based Virtual Health Assistant for rural communities to analyze symptoms, offer basic diagnoses, and recommend home remedies. Features include multilingual support and emergency SOS.",
-    link: "https://github.com/Nakulurianilkumar2004/Health_based_chatbot_and_diabeties_prediction",
-    image: "/health.jpeg",
+    link: "https://github.com/Nakulurianilkumar2004",
+    image: "/health.jpg",
   },
 ];
 
 const skills = [
   "React.js", "Node.js", "Express", "MongoDB", "PostgreSQL", "Python", "ML", "DeepLearning", "TensorFlow", "Project Management", "TypeScript", "Tailwind CSS", "Framer Motion", "Shadcn UI", "Flask", "Pandas", "Numpy"
+];
+
+const education = [
+  {
+    degree: "Bachelor of Technology in Computer Science and Engineering - AI&ML",
+    institution: "KGReddy College of Engineering and Technology",
+    gpa: "CGPA 8.49",
+    dates: "2022-2026"
+  },
+  {
+    degree: "Intermediate Education",
+    institution: "Sushila Memorial Junior College, Madhira, Khammam",
+    gpa: "96.4% in the final exams",
+    dates: "2020-2022"
+  }
 ];
 
 // --- Animation Variants for Sections ---
@@ -62,7 +77,7 @@ const experience = [
     ]
   },
   {
-    role: "GAP Dev 2.O Project Mentor",
+    role: "Project Mentor",
     company: "KGReddy College of Engineering and Technology",
     dates: "Jan 2025 - May 2025",
     description: [
@@ -121,11 +136,39 @@ export default function HomePage() {
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 tracking-tight text-white">About Me</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative w-full h-96 rounded-3xl overflow-hidden shadow-2xl transform transition-transform duration-500 hover:scale-[1.01]">
-              <Image src="/portfol1.png" alt="About Me" layout="fill" objectFit="cover" />
+              <Image src="/about-me.jpg" alt="About Me" layout="fill" objectFit="cover" />
             </div>
             <p className="text-xl text-gray-300 leading-relaxed font-light">
-              I am a driven and detail-oriented aspiring AI Engineer with a solid foundation in machine learning, deep learning, and data analysis. I am proficient in Python and AI frameworks, with a strong commitment to continuous learning and applying AI to impactful real-world solutions. I have hands-on experience as an AI Intern at Pantech Solutions and have guided students as a project mentor at KGReddy College. I was also honored with the "KGR Change Maker Award" for outstanding innovation and leadership.
+              I am a driven and detail-oriented aspiring AI Engineer with a solid foundation in machine learning, deep learning, and data analysis. I am proficient in **Python** and **AI frameworks**, with a strong commitment to continuous learning and applying AI to impactful real-world solutions. I have hands-on experience as an **AI Intern** at Pantech Solutions and have guided students as a project mentor at KGReddy College. I was also honored with the **&quot;KGR Change Maker Award&quot;** for outstanding innovation and leadership.
             </p>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Education Section */}
+      <motion.section 
+        id="education" 
+        className="py-24 px-4 bg-gray-950 transition-colors duration-500"
+        variants={sectionVariants}
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 tracking-tight text-white">Education</h2>
+          <div className="grid gap-12">
+            {education.map((edu, index) => (
+              <Card key={index} className="bg-gray-900 border-gray-800 text-white p-6 rounded-xl shadow-lg">
+                <CardHeader className="p-0 mb-4">
+                  <CardTitle className="text-2xl font-bold">{edu.degree}</CardTitle>
+                  <CardDescription className="text-gray-400 mt-1">{edu.institution} • {edu.dates}</CardDescription>
+                </CardHeader>
+                <CardContent className="p-0">
+                  <ul className="list-disc list-inside space-y-2 text-gray-300">
+                    <li>Achieved {edu.gpa}</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </motion.section>
@@ -250,4 +293,4 @@ export default function HomePage() {
       </motion.section>
     </motion.main>
   );
-} 
+}
