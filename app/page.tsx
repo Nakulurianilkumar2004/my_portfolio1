@@ -77,7 +77,7 @@ const experience = [
     ]
   },
   {
-    role: "GAP DEV 2.0 Project Mentor",
+    role: "GAP DEV 2.0Project Mentor",
     company: "KGReddy College of Engineering and Technology",
     dates: "Jan 2025 - May 2025",
     description: [
@@ -101,28 +101,27 @@ export default function HomePage() {
   return (
     <motion.main initial="hidden" animate="visible" variants={{ visible: { transition: { staggerChildren: 0.2 } } }} className="bg-black">
 
-      {/* Hero Section */}
       <motion.section 
-        id="hero" 
-        className="relative flex min-h-screen flex-col items-center justify-center p-8 text-center bg-black transition-colors duration-500"
-        variants={sectionVariants}
-      >
-        <Avatar className="h-40 w-40 mb-6 border-8 border-gray-800 shadow-xl ring-2 ring-primary">
-          <AvatarImage src="/portfol1.png" alt="Nakuluri Anilkumar" className="object-cover" />
-          <AvatarFallback className="bg-primary/20 text-primary">NA</AvatarFallback>
-        </Avatar>
-        <h1 className="text-6xl md:text-8xl font-extrabold tracking-tighter text-white">
-          Nakuluri Anilkumar
-        </h1>
-        <p className="mt-4 text-2xl md:text-3xl font-light text-gray-400 max-w-3xl leading-snug">
-          A passionate AI Engineer with a solid foundation in machine learning, deep learning, and data analysis. Committed to crafting impactful, real-world solutions.
-        </p>
-        <div className="mt-10 flex gap-6 justify-center">
-          <Button variant="outline" size="lg" className="rounded-full shadow-lg hover:shadow-xl transition-shadow bg-transparent hover:bg-gray-800 text-white" asChild><a href="https://github.com/Nakulurianilkumar2004" target="_blank"><Github className="mr-2 h-5 w-5" />GitHub</a></Button>
-          <Button variant="outline" size="lg" className="rounded-full shadow-lg hover:shadow-xl transition-shadow bg-transparent hover:bg-gray-800 text-white" asChild><a href="https://linkedin.com/in/nakuluri-anilkumar-a46139292" target="_blank"><Linkedin className="mr-2 h-5 w-5" />LinkedIn</a></Button>
-          <Button variant="outline" size="lg" className="rounded-full shadow-lg hover:shadow-xl transition-shadow bg-transparent hover:bg-gray-800 text-white" asChild><a href="mailto:nakulurianilkumar66@gmail.com"><Mail className="mr-2 h-5 w-5" />Contact Me</a></Button>
-        </div>
-      </motion.section>
+  id="hero" 
+  className="relative flex min-h-screen flex-col items-center justify-center p-8 text-center bg-black transition-colors duration-500"
+  variants={sectionVariants}
+>
+  <Avatar className="h-40 w-40 mb-6 border-8 border-gray-800 shadow-xl ring-2 ring-primary">
+    <AvatarImage src="/portfol1.png" alt="Nakuluri Anilkumar" className="object-cover" />
+    <AvatarFallback className="bg-primary/20 text-primary">NA</AvatarFallback>
+  </Avatar>
+  <h1 className="text-6xl md:text-8xl font-extrabold tracking-tighter text-white">
+    Nakuluri Anilkumar
+  </h1>
+  <p className="mt-4 text-2xl md:text-3xl font-light text-gray-400 max-w-3xl leading-snug">
+    A passionate AI Engineer with a solid foundation in machine learning, deep learning, and data analysis. Committed to crafting impactful, real-world solutions.
+  </p>
+  <div className="mt-10 flex flex-col md:flex-row gap-4 justify-center">
+    <Button variant="outline" size="lg" className="rounded-full shadow-lg hover:shadow-xl transition-shadow bg-transparent hover:bg-gray-800 text-white" asChild><a href="https://github.com/Nakulurianilkumar2004" target="_blank"><Github className="mr-2 h-5 w-5" />GitHub</a></Button>
+    <Button variant="outline" size="lg" className="rounded-full shadow-lg hover:shadow-xl transition-shadow bg-transparent hover:bg-gray-800 text-white" asChild><a href="https://linkedin.com/in/nakuluri-anilkumar-a46139292" target="_blank"><Linkedin className="mr-2 h-5 w-5" />LinkedIn</a></Button>
+    <Button variant="outline" size="lg" className="rounded-full shadow-lg hover:shadow-xl transition-shadow bg-transparent hover:bg-gray-800 text-white" asChild><a href="mailto:nakulurianilkumar66@gmail.com"><Mail className="mr-2 h-5 w-5" />Contact Me</a></Button>
+  </div>
+</motion.section>
 
       {/* About Me Section */}
       <motion.section 
